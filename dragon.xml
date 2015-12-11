@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language SYSTEM "language.dtd">
+<language name="dragon" version="5" kateversion="3.14.2" section="Scientific" extensions="*.x2m" author="ramiro vignolo" license="GPL">
+  <highlighting>
+    <list name="dragon_inp_structure_and_modules">
+<!-- Begin the Dragon structure -->
+      <item>MODULE</item>
+      <item>LINKED_LIST</item>
+      <item>XSM_FILE</item>
+      <item>SEQ_BINARY</item>
+      <item>SEQ_ASCII</item>
+<!-- Begin the Dragon modules names -->
+<!--      TODO: escribir los nombres de los modulos con los dos puntos al final.
+      TODO: corregir aquellas palabras claves con menos y mas en el medio de las mismas.-->
+      <item>MAC</item>
+      <item>LIB</item>
+      <item>GEO</item>
+      <item>SYBILT</item>
+      <item>EXCELT</item>
+      <item>NXT</item>
+      <item>MCCGT</item>
+      <item>SNT</item>
+      <item>BIVACT</item>
+      <item>TRIVAT</item>
+      <item>SHI</item>
+      <item>USS</item>
+      <item>ASM</item>
+      <item>FLU</item>
+      <item>EDI</item>
+      <item>EVO</item>
+      <item>SPH</item>
+      <item>CFC</item>
+      <item>INFO</item>
+      <item>COMPO</item>
+      <item>TLM</item>
+      <item>M2T</item>
+      <item>CHAB</item>
+      <item>CPO</item>
+      <item>SAP</item>
+      <item>MC</item>
+      <item>T</item>
+      <item>DMAC</item>
+      <item>DREF</item>
+      <item>SENS</item>
+      <item>DUO</item>
+      <item>S2M</item>
+      <item>PSP</item>
+<!-- End the Dragon modules names -->
+<!-- Begin the Salome-Related modules names -->
+      <item>G2S</item>
+      <item>G2MC</item>
+      <item>SALT</item>
+<!-- End the Salome-Related modules names -->
+<!-- Begin the Utility modules names -->
+      <item>UTL</item>
+      <item>DELETE</item>
+      <item>BACKUP</item>
+      <item>RECOVER</item>
+      <item>ADD</item>
+      <item>MPX</item>
+      <item>STAT</item>
+      <item>GREP</item>
+      <item>MSTR</item>
+      <item>FINDO</item>
+      <item>ABORT</item>
+      <item>END</item>
+<!-- End the Utility modules names -->
+<!-- Begin the MPI modules names -->
+      <item>DRVMPI</item>
+      <item>SNDMPI</item>
+<!-- End the MPI modules names -->
+<!-- End the Dragon structure -->
+    </list>
+    <list name="dragon_structures_keywords_for_modules">
+<!-- Begin MAC module -->
+<!-- MAC structure -->
+<!-- descmacinp structure -->
+      <item>EDIT</item>
+      <item>NGRO</item>
+      <item>NMIX</item>
+      <item>NIFI</item>
+      <item>DELP</item>
+      <item>ANIS</item>
+      <item>CTRA</item>
+      <item>NONE</item>
+      <item>APOL</item>
+      <item>WIMS</item>
+      <item>LEAK</item>
+      <item>ALBP</item>
+      <item>WRIT</item>
+      <item>ENER</item>
+      <item>VOLUME</item>
+      <item>ADD</item>
+      <item>READ</item>
+      <item>DELE</item>
+      <item>INPUT</item>
+      <item>STEP</item>
+      <item>NORM</item>
+<!-- descxs structure -->
+      <item>MIX</item>
+      <item>NTOTO</item>
+      <item>TOTAL</item>
+      <item>NTOT1</item>
+      <item>TRANC</item>
+      <item>NUSIGF</item>
+      <item>CHI</item>
+      <item>FIXE</item>
+      <item>DIFF</item>
+      <item>DIFFX</item>
+      <item>DIFFY</item>
+      <item>DIFFZ</item>
+      <item>NUSIGD</item>
+      <item>CHDL</item>
+      <item>OVERV</item>
+      <item>NFTOT</item>
+      <item>FLUX-INTG</item>
+      <item>FLUX-INTG-P1</item>
+      <item>H-FACTOR</item>
+      <item>SCAT</item>
+<!-- descmacupd structure -->
+      <item>EDIT</item>
+      <item>CTRA</item>
+      <item>OFF</item>
+      <item>MIX</item>
+      <item>OLDL</item>
+      <item>UPDL</item>
+<!-- End MAC module -->
+<!-- Begin LIB module -->
+<!-- LIB structure -->
+<!-- desclib structure -->
+      <item>EDIT</item>
+      <item>MXIS</item>
+      <item>NMIX</item>
+      <item>CALENDF</item>
+      <item>CTRA</item>
+      <item>NONE</item>
+      <item>APOL</item>
+      <item>WIMS</item>
+      <item>OLDW</item>
+      <item>LEAK</item>
+      <item>ANIS</item>
+      <item>ADJ</item>
+      <item>PROM</item>
+      <item>SKIP</item>
+      <item>INTR</item>
+      <item>SUBG</item>
+      <item>PT</item>
+      <item>PTMC</item>
+      <item>PTSL</item>
+      <item>NEWL</item>
+      <item>MACR</item>
+      <item>ADED</item>
+      <item>NWT0</item>
+      <item>NWT1</item>
+      <item>NTOT0</item>
+      <item>NTOT1</item>
+      <item>NELAS</item>
+      <item>NINEL</item>
+      <item>NG</item>
+      <item>NFTOT</item>
+      <item>NUDEL</item>
+      <item>NFSLO</item>
+      <item>NHEAT</item>
+      <item>CHIS</item>
+      <item>CHID</item>
+      <item>NF</item>
+      <item>NNF</item>
+      <item>N2NF</item>
+      <item>N3NF</item>
+      <item>N2N</item>
+      <item>N3N</item>
+      <item>N4N</item>
+      <item>NP</item>
+      <item>NA</item>
+      <item>DEPL</item>
+      <item>MIXS</item>
+      <item>LIB</item>
+      <item>DRAGON</item>
+      <item>MATXS</item>
+      <item>MATXS2</item>
+      <item>WIMSD4</item>
+      <item>WIMS</item>
+      <item>WIMSAECL</item>
+      <item>NDAS</item>
+      <item>APLIB1</item>
+      <item>APLIB2</item>
+      <item>APXSM</item>
+      <item>FIL</item>
+      <item>MAXS</item>
+      <item>BURN</item>
+<!-- descdepl structure -->
+      <item>CHAIN</item>
+      <item>DECAY</item>
+      <item>NG</item>
+      <item>N2N</item>
+      <item>N3N</item>
+      <item>N4N</item>
+      <item>NP</item>
+      <item>NA</item>
+      <item>NFTOT</item>
+      <item>STABLE</item>
+      <item>FROM</item>
+      <item>ENDCHAIN</item>
+<!-- descdeplA2 structure -->
+      <item>CHAIN</item>
+      <item>FROM</item>
+      <item>DECAY</item>
+      <item>ENDCHAIN</item>
+<!-- descmix1 structure -->
+      <item>MIX</item>
+      <item>INF</item>
+      <item>CORR</item>
+      <item>DBYE</item>
+      <item>SHIB</item>
+      <item>THER</item>
+      <item>TCOH</item>
+      <item>IRSET</item>
+      <item>PT</item>
+      <item>PTMC</item>
+      <item>PTSL</item>
+      <item>NONE</item>
+      <item>NOEV</item>
+      <item>SAT</item>
+      <item>COMB</item>
+<!-- descmix2 structure -->
+      <item>MIX</item>
+      <item>NOEV</item>
+<!-- End LIB module -->
+<!-- Begin GEO module -->
+<!-- GEO structure -->
+<!-- descgtyp structure -->
+      <item>VIRTUAL</item>
+      <item>HOMOGE</item>
+      <item>SPHERE</item>
+      <item>CAR1D</item>
+      <item>CAR2D</item>
+      <item>CAR3D</item>
+      <item>TUBE</item>
+      <item>TUBEX</item>
+      <item>TUBEY</item>
+      <item>TUBEZ</item>
+      <item>RTHETA</item>
+      <item>HEX</item>
+      <item>HEXZ</item>
+      <item>HEXT</item>
+      <item>HEXTZ</item>
+      <item>CARCEL</item>
+      <item>CARCELX</item>
+      <item>CARCELY</item>
+      <item>CARCELZ</item>
+      <item>HEXCEL</item>
+      <item>HEXCELZ</item>
+      <item>HEXTCEL</item>
+      <item>HEXTCELZ</item>
+      <item>GROUP</item>
+<!-- descgcnt structure -->
+      <item>EDIT</item>
+<!-- descBC structure -->
+      <item>X-</item>
+      <item>X+</item>
+      <item>Y-</item>
+      <item>Y+</item>
+      <item>Z-</item>
+      <item>Z+</item>
+      <item>R+</item>
+      <item>HBC</item>
+      <item>VOID</item>
+      <item>REFL</item>
+      <item>SSYM</item>
+      <item>DIAG</item>
+      <item>TRAN</item>
+      <item>SYME</item>
+      <item>ALBE</item>
+      <item>ZERO</item>
+      <item>PI/2</item>
+      <item>PI</item>
+      <item>CYLI</item>
+      <item>ACYL</item>
+      <item>S30</item>
+      <item>SA60</item>
+      <item>SB60</item>
+      <item>S90</item>
+      <item>R120</item>
+      <item>R180</item>
+      <item>SA180</item>
+      <item>SB180</item>
+      <item>COMPLETE</item>
+      <item>RADS</item>
+      <item>ANG</item>
+<!-- descSP structure -->
+      <item>MESHX</item>
+      <item>SPLITX</item>
+      <item>MESHY</item>
+      <item>SPLITY</item>
+      <item>MESHZ</item>
+      <item>SPLITZ</item>
+      <item>RADIUS</item>
+      <item>OFFCENTER</item>
+      <item>SPLITR</item>
+      <item>SECT</item>
+      <item>SIDE</item>
+      <item>SPLITH</item>
+      <item>NPIN</item>
+      <item>DPIN</item>
+      <item>RPIN</item>
+      <item>APIN</item>
+      <item>CPINX</item>
+      <item>CPINY</item>
+      <item>CPINZ</item>
+<!-- descPP structure -->
+      <item>MIX</item>
+      <item>REPEAT</item>
+      <item>PLANE</item>
+      <item>SAME</item>
+      <item>CROWN</item>
+      <item>ALL</item>
+      <item>UPTO</item>
+      <item>HMIX</item>
+      <item>CELL</item>
+      <item>MERGE</item>
+      <item>TURN</item>
+      <item>CLUSTER</item>
+      <item>MIX-NAMES</item>
+<!-- descDH structure -->
+      <item>BIHET</item>
+      <item>TUBE</item>
+      <item>SPHE</item>
+<!-- descSIJ structure -->
+      <item>POURCE</item>
+      <item>PROCEL</item>
+<!-- End GEO module -->
+<!-- Begin tracking modules -->
+<!-- desctrack structure -->
+      <item>EDIT</item>
+      <item>TITL</item>
+      <item>MAXR</item>
+      <item>NORE</item>
+      <item>RENO</item>
+      <item>REND</item>
+<!-- Begin SYBILT module -->
+<!-- SYBILT structure -->
+<!-- descsybil structure -->
+      <item>MAXJ</item>
+      <item>MAXZ</item>
+      <item>HALT</item>
+      <item>QUA1</item>
+      <item>QUA2</item>
+      <item>EQW</item>
+      <item>GAUS</item>
+      <item>ROTH</item>
+      <item>ROT+</item>
+      <item>DP00</item>
+      <item>DP01</item>
+      <item>WIGN</item>
+      <item>ASKE</item>
+      <item>SANC</item>
+      <item>LIGN</item>
+      <item>RECT</item>
+      <item>QUAB</item>
+      <item>SAPO</item>
+      <item>HEBE</item>
+<!-- End SYBILT module -->
+<!-- Begin EXCELT module -->
+<!-- EXCELT structure -->
+<!-- descexcel structure -->
+      <item>ANIS</item>
+      <item>ONEG</item>
+      <item>ALLG</item>
+      <item>XCLL</item>
+      <item>TREG</item>
+      <item>TMER</item>
+      <item>PISO</item>
+      <item>PSPC</item>
+      <item>CUT</item>
+      <item>QUAB</item>
+      <item>SAPO</item>
+      <item>HEBE</item>
+      <item>PRIX</item>
+      <item>PRIY</item>
+      <item>PRIZ</item>
+      <item>LCMD</item>
+      <item>OPP1</item>
+      <item>OGAU</item>
+      <item>GAUS</item>
+      <item>CACA</item>
+      <item>CACB</item>
+      <item>TRAK</item>
+      <item>TISO</item>
+      <item>TSPC</item>
+      <item>MEDI</item>
+      <item>CORN</item>
+      <item>SYMM</item>
+      <item>NOSY</item>
+      <item>HALT</item>
+<!-- End EXCELT module -->
+<!-- Begin NXT module -->
+<!-- NXT structure -->
+<!-- descnxt structure -->
+      <item>ANIS</item>
+      <item>ONEG</item>
+      <item>ALLG</item>
+      <item>XCLL</item>
+      <item>QUAB</item>
+      <item>SAPO</item>
+      <item>HEBE</item>
+      <item>PISO</item>
+      <item>PSPC</item>
+      <item>CUT</item>
+      <item>SYMM</item>
+      <item>NOSY</item>
+      <item>GAUS</item>
+      <item>CACA</item>
+      <item>CACB</item>
+      <item>LCMD</item>
+      <item>OPP1</item>
+      <item>OGAU</item>
+      <item>TISO</item>
+      <item>TSPC</item>
+      <item>EQW</item>
+      <item>GAUS</item>
+      <item>PNTN</item>
+      <item>SMS</item>
+      <item>LSN</item>
+      <item>QRN</item>
+      <item>MEDI</item>
+      <item>EQW2</item>
+      <item>CORN</item>
+      <item>NOTR</item>
+      <item>MC</item>
+      <item>NBSLIN</item>
+      <item>LONG</item>
+      <item>PRIZ</item>
+<!-- End NXT module -->
+<!-- Begin MCCGT module -->
+<!-- MCCGT structure -->
+<!-- descmccg structure -->
+      <item>EDIT</item>
+      <item>LCMD</item>
+      <item>OPP1</item>
+      <item>OGAU</item>
+      <item>GAUS</item>
+      <item>CACA</item>
+      <item>CACB</item>
+      <item>DIFC</item>
+      <item>LEXA</item>
+      <item>MAXI</item>
+      <item>EPSI</item>
+      <item>AAC</item>
+      <item>NONE</item>
+      <item>DIAG</item>
+      <item>FULL</item>
+      <item>ILUO</item>
+      <item>TMT</item>
+      <item>SCR</item>
+      <item>KRYL</item>
+      <item>MCU</item>
+      <item>HDD</item>
+      <item>LEXF</item>
+      <item>SC</item>
+      <item>LDC</item>
+      <item>STIS</item>
+      <item>ADJ</item>
+<!-- End MCCGT module -->
+<!-- Begin SNT module -->
+<!-- SNT structure -->
+<!-- descsn structure -->
+      <item>DIAM</item>
+      <item>SN</item>
+      <item>SCAT</item>
+      <item>LIVO</item>
+      <item>NLIVO</item>
+      <item>DSA</item>
+      <item>NDSA</item>
+      <item>GMRES</item>
+      <item>NSDSA</item>
+      <item>MAXI</item>
+      <item>EPSI</item>
+      <item>QUAD</item>
+      <item>QUAB</item>
+      <item>SAPO</item>
+      <item>HEBE</item>
+<!-- End SNT module -->
+<!-- Begin BIVACT module -->
+<!-- BIVACT structure -->
+<!-- descbivac structure -->
+      <item>PRIM</item>
+      <item>DUAL</item>
+      <item>MCFD</item>
+      <item>PN</item>
+      <item>SPN</item>
+      <item>SCAT</item>
+      <item>DIFF</item>
+      <item>VOID</item>
+<!-- End BIVACT module -->
+<!-- Begin TRIVAT module -->
+<!-- TRIVAT structure -->
+<!-- descTRIVAC structure -->
+      <item>PRIM</item>
+      <item>DUAL</item>
+      <item>MCFD</item>
+      <item>LUMP</item>
+      <item>SPN</item>
+      <item>SCAT</item>
+      <item>DIFF</item>
+      <item>VOID</item>
+      <item>ADI</item>
+      <item>VECT</item>
+      <item>PRTV</item>
+<!-- End TRIVAT module -->
+<!-- End tracking modules -->
+<!-- Begin SHI module -->
+<!-- SHI structure -->
+<!-- descshi structure -->
+      <item>EDIT</item>
+      <item>GRMIN</item>
+      <item>GRMAX</item>
+      <item>MXIT</item>
+      <item>EPS</item>
+      <item>LJ</item>
+      <item>NOLJ</item>
+      <item>GC</item>
+      <item>NOGC</item>
+      <item>NOTR</item>
+      <item>LEVEL</item>
+      <item>PIJ</item>
+      <item>ARM</item>
+<!-- End SHI module -->
+<!-- Begin USS module -->
+<!-- USS structure -->
+<!-- descuss structure -->
+      <item>EDIT</item>
+      <item>GRMIN</item>
+      <item>GRMAX</item>
+      <item>PASS</item>
+      <item>NOCO</item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      
+    </list>
+    <contexts>
+      <context attribute="Normal Text" lineEndContext="#stay" name="Normal">
+
+<!-- do not detect strings (for now) -->
+<!--         <DetectChar attribute="String" context="String" char="&quot;"/> -->
+<!--         <DetectChar attribute="Normal Text" context="#stay"  char="&quot;"/> -->
+
+        <keyword attribute="Keyword1" context="#stay" String="dragon_inp_structure_and_modules"/>
+        <keyword attribute="Keyword2" context="#stay" String="dragon_modules"/>
+        <keyword attribute="Identifier" context="#stay" String="dragon_structures"/>
+        <keyword attribute="Function" context="#stay" String="dragon_structures_keywords_for_modules"/>
+
+        <!--<DetectChar char="{" attribute="Operator" context="#stay" beginRegion="block" />
+        <DetectChar char="}" attribute="Operator" context="#stay" endRegion="block" />
+
+        <DetectChar char="=" attribute="Operator" context="#stay" />
+        <DetectChar char="+" attribute="Operator" context="#stay" />
+        <DetectChar char="-" attribute="Operator" context="#stay" />
+        <DetectChar char="/" attribute="Operator" context="#stay" />
+        <DetectChar char="*" attribute="Operator" context="#stay" />
+        <DetectChar char="^" attribute="Operator" context="#stay" />
+        <DetectChar char="," attribute="Operator" context="#stay" />
+        <DetectChar char="(" attribute="Operator" context="#stay" />
+        <DetectChar char=")" attribute="Operator" context="#stay" />-->
+
+        <Float attribute="Types" context="#stay"/>
+        <Int attribute="Types" context="#stay"/>
+<!--         no need for this rami: -->
+<!--         <Detect2Chars char="\" char1="*" attribute="Normal Text" context="#stay" /> -->
+        <DetectChar attribute="Comment" context="Comment" char="*"/>
+      </context>
+    
+      <context name="Comment" attribute="Comment" lineEndContext="#pop"/>
+
+      <context name="String" attribute="String" lineEndContext="#stay">
+        <DetectChar char="&quot;" attribute="String" context="#pop"/>
+      </context>
+
+    </contexts>
+
+    <itemDatas>
+      <itemData name="Normal Text" defStyleNum="dsNormal"/>
+      <itemData name="Keyword1" defStyleNum="dsKeyword"/>
+      <itemData name="Keyword2" defStyleNum="dsKeyword" color="#970202"/>
+<!--       <itemData name="Operator" defStyleNum="dsOperator" color="#666666"/> -->
+      <itemData name="Identifier" defStyleNum="dsOthers" color="#663333" italic="1"/>
+      <itemData name="Function" defStyleNum="dsFunction" color="#7A378B" bold="1" italic="1"/>
+      <itemData name="Types" defStyleNum="dsDataType" color="#B27300"/>
+      <itemData name="String" defStyleNum="dsString" color="#666699"/>
+      <itemData name="Comment" defStyleNum="dsComment"/>
+    </itemDatas>
+  </highlighting>
+
+  <general>
+    <comments>
+      <comment name="singleLine" start="*" />
+    </comments>
+    <keywords casesensitive="1" />
+  </general>
+</language>
