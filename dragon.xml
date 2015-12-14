@@ -1181,103 +1181,15 @@
       <item>ALL</item>
       <item>ITEM</item>
 <!-- End SNDMPI module -->
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      
     </list>
     <contexts>
       <context attribute="Normal Text" lineEndContext="#stay" name="Normal">
 
-<!-- do not detect strings (for now) -->
-<!--         <DetectChar attribute="String" context="String" char="&quot;"/> -->
-<!--         <DetectChar attribute="Normal Text" context="#stay"  char="&quot;"/> -->
-
         <keyword attribute="Keyword1" context="#stay" String="dragon_inp_structure_and_modules"/>
-        <keyword attribute="Keyword2" context="#stay" String="dragon_modules"/>
-        <keyword attribute="Identifier" context="#stay" String="dragon_structures"/>
-        <keyword attribute="Function" context="#stay" String="dragon_structures_keywords_for_modules"/>
+        <keyword attribute="keyword2" context="#stay" String="dragon_structures_keywords_for_modules"/>
 
         <!--<DetectChar char="{" attribute="Operator" context="#stay" beginRegion="block" />
         <DetectChar char="}" attribute="Operator" context="#stay" endRegion="block" />
-
         <DetectChar char="=" attribute="Operator" context="#stay" />
         <DetectChar char="+" attribute="Operator" context="#stay" />
         <DetectChar char="-" attribute="Operator" context="#stay" />
@@ -1287,12 +1199,17 @@
         <DetectChar char="," attribute="Operator" context="#stay" />
         <DetectChar char="(" attribute="Operator" context="#stay" />
         <DetectChar char=")" attribute="Operator" context="#stay" />-->
+        <Detect2Chars char=":" char1="=" attribute="Operator" context="#stay" />
+        <Detect2Chars char="&lt;" char1="&lt;" attribute="Operator" context="#stay" beginRegion="block" />
+        <Detect2Chars char="&gt;" char1="&gt;" attribute="Operator" context="#stay" endRegion="block" />
 
         <Float attribute="Types" context="#stay"/>
         <Int attribute="Types" context="#stay"/>
-<!--         no need for this rami: -->
-<!--         <Detect2Chars char="\" char1="*" attribute="Normal Text" context="#stay" /> -->
+        
         <DetectChar attribute="Comment" context="Comment" char="*"/>
+        <DetectChar attribute="Comment" context="Comment" char="!"/>
+        <Detect2Chars char="(" char1="*" attribute="Comment" context="Comment" beginRegion="comment" />
+        <Detect2Chars char="*" char1=")" attribute="Comment" context="#pop" endRegion="comment" />
       </context>
     
       <context name="Comment" attribute="Comment" lineEndContext="#pop"/>
@@ -1306,10 +1223,8 @@
     <itemDatas>
       <itemData name="Normal Text" defStyleNum="dsNormal"/>
       <itemData name="Keyword1" defStyleNum="dsKeyword"/>
-      <itemData name="Keyword2" defStyleNum="dsKeyword" color="#970202"/>
-<!--       <itemData name="Operator" defStyleNum="dsOperator" color="#666666"/> -->
-      <itemData name="Identifier" defStyleNum="dsOthers" color="#663333" italic="1"/>
-      <itemData name="Function" defStyleNum="dsFunction" color="#7A378B" bold="1" italic="1"/>
+      <itemData name="keyword2" defStyleNum="dsFunction" color="#7A378B" bold="1" italic="1"/>
+      <itemData name="Operator" defStyleNum="dsOperator" color="#B20000"/>
       <itemData name="Types" defStyleNum="dsDataType" color="#B27300"/>
       <itemData name="String" defStyleNum="dsString" color="#666699"/>
       <itemData name="Comment" defStyleNum="dsComment"/>
@@ -1319,6 +1234,8 @@
   <general>
     <comments>
       <comment name="singleLine" start="*" />
+      <comment name="singleLine" start="!" />
+      <comment name="multiLine" start="(*" end="*)" />
     </comments>
     <keywords casesensitive="1" />
   </general>
