@@ -11,7 +11,8 @@
       <item>SEQ_ASCII</item>
 <!-- Begin the Dragon modules names -->
 <!--  TODO: escribir los nombres de los modulos con los dos puntos al final.
-      TODO: corregir aquellas palabras claves con menos y mas en el medio de las mismas.-->
+      TODO: corregir aquellas palabras claves con menos y mas en el medio de las mismas.
+      TODO: corregir aquellas palabras claves con signos de porcentaje o dividiendo en el medio de las mismas.-->
       <item>MAC:</item>
       <item>LIB:</item>
       <item>GEO:</item>
@@ -332,7 +333,7 @@
 <!-- Begin tracking modules -->
 <!-- desctrack structure -->
       <item>EDIT</item>
-      <item>TITL</item>
+      <item>TITLE</item>
       <item>MAXR</item>
       <item>NORE</item>
       <item>RENO</item>
@@ -589,7 +590,7 @@
       <item>P1</item>
       <item>B0</item>
       <item>B1</item>
-      <item>BOTR</item>
+      <item>B0TR</item>
       <item>PNLR</item>
       <item>PNL</item>
       <item>SIGS</item>
@@ -798,7 +799,7 @@
       <item>FLUX</item>
       <item>TIME</item>
       <item>VALU</item>
-      <item>REAL</item>
+<!--       <item>REAL</item> -->  <!--lo vamos a dejar solo como variable de control_language-->
       <item>CHAR</item>
       <item>INTE</item>
       <item>ISOT</item>
@@ -1182,11 +1183,52 @@
       <item>ITEM</item>
 <!-- End SNDMPI module -->
     </list>
+    <list name="assert_procedures">
+<!-- Begin Assert procedures -->
+<!-- assertS structure -->
+      <item>assertS</item>
+<!-- assertV structure -->
+      <item>assertV</item>
+    </list>
+    <list name="gan_generalized_driver">
+<!-- descmodule structure -->
+<!-- descobject structure -->
+      <item>FILE</item>
+    </list>
+    <list name="control_language">
+      <item>PARAMETER</item>
+      <item>PROCEDURE</item>
+      <item>DIRECT_ACCESS</item>
+      <item>INTEGER</item>
+      <item>REAL</item>
+      <item>CHARACTER</item>
+      <item>STRING</item>
+      <item>DOUBLE</item>
+      <item>LOGICAL</item>
+      <item>REDGET</item>
+      <item>EVALUATE</item>
+      <item>PRINT</item>
+      <item>IF</item>
+      <item>THEN</item>
+      <item>ELSE</item>
+      <item>ELSEIF</item>
+      <item>ENDIF</item>
+      <item>REPEAT</item>
+      <item>UNTIL</item>
+      <item>WHILE</item>
+      <item>DO</item>
+      <item>ENDWHILE</item>
+      <item>ECHO</item>
+      <item>QUIT</item>
+    </list>
     <contexts>
       <context attribute="Normal Text" lineEndContext="#stay" name="Normal">
 
-        <keyword attribute="Keyword1" context="#stay" String="dragon_inp_structure_and_modules"/>
+        <keyword attribute="keyword1" context="#stay" String="dragon_inp_structure_and_modules"/>
         <keyword attribute="keyword2" context="#stay" String="dragon_structures_keywords_for_modules"/>
+	<keyword attribute="keyword3" context="#stay" String="assert_procedures"/>
+	<keyword attribute="keyword4" context="#stay" String="gan_generalized_driver"/>
+	<keyword attribute="keyword5" context="#stay" String="control_language"/>
 
         <!--<DetectChar char="{" attribute="Operator" context="#stay" beginRegion="block" />
         <DetectChar char="}" attribute="Operator" context="#stay" endRegion="block" />
@@ -1199,7 +1241,9 @@
         <DetectChar char="," attribute="Operator" context="#stay" />
         <DetectChar char="(" attribute="Operator" context="#stay" />
         <DetectChar char=")" attribute="Operator" context="#stay" />-->
+	<StringDetect String=":::" attribute="Operator" context="#stay"/>
         <Detect2Chars char=":" char1="=" attribute="Operator" context="#stay" />
+	<Detect2Chars char=":" char1=":" attribute="Operator" context="#stay" />
         <Detect2Chars char="&lt;" char1="&lt;" attribute="Operator" context="#stay" beginRegion="block" />
         <Detect2Chars char="&gt;" char1="&gt;" attribute="Operator" context="#stay" endRegion="block" />
 
@@ -1222,8 +1266,11 @@
 
     <itemDatas>
       <itemData name="Normal Text" defStyleNum="dsNormal"/>
-      <itemData name="Keyword1" defStyleNum="dsKeyword"/>
+      <itemData name="keyword1" defStyleNum="dsKeyword"/>
       <itemData name="keyword2" defStyleNum="dsFunction" color="#7A378B" bold="1" italic="1"/>
+      <itemData name="keyword3" defStyleNum="dsFunction" color="#488214" italic="1"/>
+      <itemData name="keyword4" defStyleNum="dsFunction" color="#A0522D" italic="1"/>
+      <itemData name="keyword5" defStyleNum="dsFunction" color="#388E8E" bold="1"/>
       <itemData name="Operator" defStyleNum="dsOperator" color="#B20000"/>
       <itemData name="Types" defStyleNum="dsDataType" color="#B27300"/>
       <itemData name="String" defStyleNum="dsString" color="#666699"/>
