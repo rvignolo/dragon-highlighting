@@ -1,0 +1,9 @@
+MACRO_CELL_GEO :=  GEO: :: GROUP 
+                   HBC S30 REFL
+
+               ::: CELL_GEO := GEO: HEXCEL 5
+                   
+                   
+                   
+Hacer un hexagono y llenarlo de los pines. Luego pedir simetria de 1/12 y ya esta. Pero esto tiene la desventaja de 
+tener que computar muchisimas probabilidades de colision para mallados grandes. De hecho probablemente ni funcione.
