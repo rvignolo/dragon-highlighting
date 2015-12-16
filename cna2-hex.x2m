@@ -1,9 +1,73 @@
-MACRO_CELL_GEO :=  GEO: :: GROUP 
-                   HBC S30 REFL
+! Supongo 14 volumenes en el combustible y luego vaina (estos radios son los de CONDOR e incluyen al gap en el combustible).
+! La cantidad de volumenes anulares son entonces lr = 14+1=15.
+! Hay que definir lr+1 radios, siendo el primero el cero.
+INTEGER lr := 15 ; (* refiere a la cantidad de volumenes anulares *)
+REAL r0 := 0.000 ;
+REAL r1 := 0.163 ;
+REAL r2 := 0.230 ;
+REAL r3 := 0.282 ;
+REAL r4 := 0.326 ;
+REAL r5 := 0.364 ;
+REAL r6 := 0.399 ;
+REAL r7 := 0.431 ;
+REAL r8 := 0.461 ;
+REAL r9 := 0.489 ;
+REAL r10 := 0.515 ;
+REAL r11 := 0.540 ;
+REAL r12 := 0.564 ;
+REAL r13 := 0.580 ;
+REAL r14 := 0.588 ;
+REAL r15 := 0.645 ;
 
-               ::: CELL_GEO := GEO: HEXCEL 5
-                   
-                   
-                   
-Hacer un hexagono y llenarlo de los pines. Luego pedir simetria de 1/12 y ya esta. Pero esto tiene la desventaja de 
-tener que computar muchisimas probabilidades de colision para mallados grandes. De hecho probablemente ni funcione.
+REAL side := 1.0 ;
+
+! Si hacemos todos los comb con las mismas temperaturas, pero que varíen radialmente, esto va como piña.
+! Si no es así, tenemos que definir diferentes celdas para cada combustible y en MIX los materiales son diferentes.
+! Si hacemos celdas hexagonales para materiales que contienen parte del canal refrigerante, esto no esta incluído aún.
+! Pero incluirlo sería definir nuevos Ci y sus MIX (a partir de una dilución).
+
+MIX de 1 a 14 son los combustibles a diferentes temperaturas radiales y volumetricas.
+    además tener en cuenta que el gap se diluyó en el combustible.
+MIX 15 es la vaina.
+MIX 16 es el refrigerante.
+MIX 17 es el moderador pero también hay que tener en cuenta que no puse el canal refrigerante.
+
+MACROCELL_GEO :=  GEO: :: HEX 12
+                  HBC S30 REFL
+                  C1 C1 C1 C1 C1 C1
+                  C2 C2 C2 C2 C2 C2
+              ::: C1 := GEO: HEXCEL <<lr>>
+                  SIDE <<side>> SECT -1 0 RADIUS  <<r0>>  <<r1>>  <<r2>>  <<r3>>  <<r4>> 
+                                                  <<r5>>  <<r6>>  <<r7>>  <<r8>>  <<r9>> 
+                                                 <<r10>> <<r11>> <<r12>> <<r13>> <<r14>> <<r15>>
+                  MIX  1  1  1  1  1  1
+                       2  2  2  2  2  2 
+                       3  3  3  3  3  3
+                       4  4  4  4  4  4 
+                       5  5  5  5  5  5 
+                       6  6  6  6  6  6 
+                       7  7  7  7  7  7 
+                       8  8  8  8  8  8
+                       9  9  9  9  9  9 
+                      10 10 10 10 10 10
+                      11 11 11 11 11 11
+                      12 12 12 12 12 12
+                      13 13 13 13 13 13
+                      14 14 14 14 14 14
+                      15 15 15 15 15 15 
+                      16 16 16 16 16 16 ;
+              ::: C2 := GEO: HEX 1
+                  SIDE <<side>> SECT -1 0
+                  MIX 17 17 17 17 17 17 ;
+              ;
+              
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+! Esto es de HELIOS:
+! Hacer un hexagono y llenarlo de los pines. Luego pedir simetria de 1/12 y ya esta. Pero esto tiene la desventaja de 
+! tener que computar muchisimas probabilidades de colision para mallados grandes. De hecho probablemente ni funcione.

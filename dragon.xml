@@ -10,9 +10,6 @@
       <item>SEQ_BINARY</item>
       <item>SEQ_ASCII</item>
 <!-- Begin the Dragon modules names -->
-<!--  TODO: escribir los nombres de los modulos con los dos puntos al final.
-      TODO: corregir aquellas palabras claves con menos y mas en el medio de las mismas.
-      TODO: corregir aquellas palabras claves con signos de porcentaje o dividiendo en el medio de las mismas.-->
       <item>MAC:</item>
       <item>LIB:</item>
       <item>GEO:</item>
@@ -1287,3 +1284,9 @@
     <keywords casesensitive="1" />
   </general>
 </language>
+
+<!-- TODO: escribir los nombres de los modulos con los dos puntos al final.
+     TODO: corregir aquellas palabras claves con menos y mas en el medio de las mismas.
+     TODO: corregir aquellas palabras claves con signos de porcentaje o dividiendo en el medio de las mismas.
+     TODO: corregir comentarios delimitados por (* y *) porque al parecer el hecho de que existan comentarios que
+           arrancan unicamente con * generan conflictos-->
