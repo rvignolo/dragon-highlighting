@@ -10,7 +10,7 @@
       <item>SEQ_BINARY</item>
       <item>SEQ_ASCII</item>
 <!-- Begin the Dragon modules names -->
-      <item>MAC:</item>
+      <!--<item>MAC:</item>
       <item>LIB:</item>
       <item>GEO:</item>
       <item>SYBILT:</item>
@@ -42,15 +42,15 @@
       <item>SENS:</item>
       <item>DUO:</item>
       <item>S2M:</item>
-      <item>PSP:</item>
+      <item>PSP:</item>-->
 <!-- End the Dragon modules names -->
 <!-- Begin the Salome-Related modules names -->
-      <item>G2S:</item>
+      <!--<item>G2S:</item>
       <item>G2MC:</item>
-      <item>SALT:</item>
+      <item>SALT:</item>-->
 <!-- End the Salome-Related modules names -->
 <!-- Begin the Utility modules names -->
-      <item>UTL:</item>
+      <!--<item>UTL:</item>
       <item>DELETE:</item>
       <item>BACKUP:</item>
       <item>RECOVER:</item>
@@ -61,11 +61,11 @@
       <item>MSTR:</item>
       <item>FIND0:</item>
       <item>ABORT:</item>
-      <item>END:</item>
+      <item>END:</item>-->
 <!-- End the Utility modules names -->
 <!-- Begin the MPI modules names -->
-      <item>DRVMPI:</item>
-      <item>SNDMPI:</item>
+      <!--<item>DRVMPI:</item>
+      <item>SNDMPI:</item>-->
 <!-- End the MPI modules names -->
 <!-- End the Dragon structure -->
     </list>
@@ -111,9 +111,9 @@
       <item>CHDL</item>
       <item>OVERV</item>
       <item>NFTOT</item>
-      <item>FLUX-INTG</item>
+      <!--<item>FLUX-INTG</item>
       <item>FLUX-INTG-P1</item>
-      <item>H-FACTOR</item>
+      <item>H-FACTOR</item>-->
       <item>SCAT</item>
 <!-- descmacupd structure -->
       <item>EDIT</item>
@@ -254,13 +254,13 @@
 <!-- descgcnt structure -->
       <item>EDIT</item>
 <!-- descBC structure -->
-      <item>X-</item>
+      <!--<item>X-</item>
       <item>X+</item>
       <item>Y-</item>
       <item>Y+</item>
       <item>Z-</item>
       <item>Z+</item>
-      <item>R+</item>
+      <item>R+</item>-->
       <item>HBC</item>
       <item>VOID</item>
       <item>REFL</item>
@@ -270,7 +270,7 @@
       <item>SYME</item>
       <item>ALBE</item>
       <item>ZERO</item>
-      <item>PI/2</item>
+      <!--<item>PI/2</item>-->
       <item>PI</item>
       <item>CYLI</item>
       <item>ACYL</item>
@@ -318,7 +318,7 @@
       <item>MERGE</item>
       <item>TURN</item>
       <item>CLUSTER</item>
-      <item>MIX-NAMES</item>
+      <!--<item>MIX-NAMES</item>-->
 <!-- descDH structure -->
       <item>BIHET</item>
       <item>TUBE</item>
@@ -346,7 +346,7 @@
       <item>EQW</item>
       <item>GAUS</item>
       <item>ROTH</item>
-      <item>ROT+</item>
+      <!--<item>ROT+</item>-->
       <item>DP00</item>
       <item>DP01</item>
       <item>WIGN</item>
@@ -572,7 +572,6 @@
       <item>P</item>
       <item>K</item>
       <item>B</item>
-      <item></item>
       <item>L</item>
       <item>EXTE</item>
       <item>THER</item>
@@ -678,7 +677,7 @@
       <item>COOL</item>
       <item>FLUX</item>
       <item>POWR</item>
-      <item>W/CC</item>
+      <!--<item>W/CC</item>-->
       <item>KEEP</item>
       <item>EPS1</item>
       <item>EPS2</item>
@@ -761,19 +760,19 @@
       <item>NDAS</item>
       <item>APLIB1</item>
       <item>APLIB2</item>
-      <item>FIL:</item>
+      <!--<item>FIL:</item>
       <item>TMP:</item>
       <item>PUR:</item>
       <item>ENR:</item>
-      <item>ISO:</item>
+      <item>ISO:</item>-->
       <item>GET</item>
       <item>MASS</item>
       <item>CALC</item>
       <item>DENS</item>
       <item>WATER</item>
-      <item>WGT%D2O</item>
+      <!--<item>WGT%D2O</item>
       <item>WGT%UO2</item>
-      <item>WGT%THO2</item>
+      <item>WGT%THO2</item>-->
 <!-- End INFO module -->
 <!-- Begin COMPO module -->
 <!-- COMPO structure -->
@@ -819,7 +818,7 @@
       <item>WARNING-ONLY</item>
 <!-- compo_data4 structure -->
       <item>EDIT</item>
-      <item>DB-STRUC</item>
+      <!--<item>DB-STRUC</item>-->
 <!-- End COMPO module -->
 <!-- Begin TLM module -->
 <!-- TLM structure -->
@@ -1159,7 +1158,7 @@
 <!-- DRVMPI structure -->
       <item>EDIT</item>
       <item>WORLD-SIZE</item>
-      <item>MY-ID</item>
+      <!--<item>MY-ID</item>-->
       <item>SETLOOP</item>
       <item>B0</item>
       <item>B1</item>
@@ -1222,22 +1221,89 @@
       <context attribute="Normal Text" lineEndContext="#stay" name="Normal">
 
         <keyword attribute="keyword1" context="#stay" String="dragon_inp_structure_and_modules"/>
+<!--    Escribimos aquí las que faltan por tener conflictos.-->
+        <StringDetect attribute="keyword1" context="#stay" String="MAC:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="LIB:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="GEO:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="SYBILT:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="EXCELT:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="NXT:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="MCCGT:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="SNT:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="BIVACT:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="TRIVAT:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="SHI:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="USS:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="ASM:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="FLU:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="EDI:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="EVO:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="SPH:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="CFC:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="INFO:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="COMPO:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="TLM:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="M2T:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="CHAB:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="CPO:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="SAP:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="MC:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="T:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="DMAC:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="DREF:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="SENS:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="DUO:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="S2M:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="PSP:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="G2S:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="G2MC:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="SALT:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="UTL:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="DELETE:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="BACKUP:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="RECOVER:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="ADD:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="MPX:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="STAT:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="GREP:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="MSTR:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="FIND0:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="ABORT:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="END:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="DRVMPI:"/>
+        <StringDetect attribute="keyword1" context="#stay" String="SNDMPI:"/>
+        
+<!--    Escribimos aquí las que faltan por tener conflictos.-->
+        <StringDetect attribute="keyword2" context="#stay" String="FLUX-INTG-P1"/>
+        <StringDetect attribute="keyword2" context="#stay" String="FLUX-INTG"/>
+        <StringDetect attribute="keyword2" context="#stay" String="H-FACTOR"/>
+        <StringDetect attribute="keyword2" context="#stay" String="X-"/>
+        <StringDetect attribute="keyword2" context="#stay" String="X+"/>
+        <StringDetect attribute="keyword2" context="#stay" String="Y-"/>
+        <StringDetect attribute="keyword2" context="#stay" String="Y+"/>
+        <StringDetect attribute="keyword2" context="#stay" String="Z-"/>
+        <StringDetect attribute="keyword2" context="#stay" String="Z+"/>
+        <StringDetect attribute="keyword2" context="#stay" String="R+"/>
+        <StringDetect attribute="keyword2" context="#stay" String="PI/2"/>
+        <StringDetect attribute="keyword2" context="#stay" String="MIX-NAMES"/>
+        <StringDetect attribute="keyword2" context="#stay" String="ROT+"/>
+        <StringDetect attribute="keyword2" context="#stay" String="W/CC"/>
+        <StringDetect attribute="keyword2" context="#stay" String="FIL:"/>
+        <StringDetect attribute="keyword2" context="#stay" String="TMP:"/>
+        <StringDetect attribute="keyword2" context="#stay" String="PUR:"/>
+        <StringDetect attribute="keyword2" context="#stay" String="ENR:"/>
+        <StringDetect attribute="keyword2" context="#stay" String="ISO:"/>
+        <StringDetect attribute="keyword2" context="#stay" String="WGT%D2O"/>
+        <StringDetect attribute="keyword2" context="#stay" String="WGT%UO2"/>
+        <StringDetect attribute="keyword2" context="#stay" String="WGT%THO2"/>
+        <StringDetect attribute="keyword2" context="#stay" String="DB-STRUC"/>
+        <StringDetect attribute="keyword2" context="#stay" String="MY-ID"/>
         <keyword attribute="keyword2" context="#stay" String="dragon_structures_keywords_for_modules"/>
-	<keyword attribute="keyword3" context="#stay" String="assert_procedures"/>
-	<keyword attribute="keyword4" context="#stay" String="gan_generalized_driver"/>
-	<keyword attribute="keyword5" context="#stay" String="control_language"/>
 
-        <!--<DetectChar char="{" attribute="Operator" context="#stay" beginRegion="block" />
-        <DetectChar char="}" attribute="Operator" context="#stay" endRegion="block" />
-        <DetectChar char="=" attribute="Operator" context="#stay" />
-        <DetectChar char="+" attribute="Operator" context="#stay" />
-        <DetectChar char="-" attribute="Operator" context="#stay" />
-        <DetectChar char="/" attribute="Operator" context="#stay" />
-        <DetectChar char="*" attribute="Operator" context="#stay" />
-        <DetectChar char="^" attribute="Operator" context="#stay" />
-        <DetectChar char="," attribute="Operator" context="#stay" />
-        <DetectChar char="(" attribute="Operator" context="#stay" />
-        <DetectChar char=")" attribute="Operator" context="#stay" />-->
+        <keyword attribute="keyword3" context="#stay" String="assert_procedures"/>
+        <keyword attribute="keyword4" context="#stay" String="gan_generalized_driver"/>
+        <keyword attribute="keyword5" context="#stay" String="control_language"/>
+        
 	<StringDetect String=":::" attribute="Operator" context="#stay"/>
         <Detect2Chars char=":" char1="=" attribute="Operator" context="#stay" />
 	<Detect2Chars char=":" char1=":" attribute="Operator" context="#stay" />
