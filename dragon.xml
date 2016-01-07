@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE language SYSTEM "language.dtd">
-<language name="dragon" version="5" kateversion="3.14.2" section="Scientific" extensions="*.x2m" author="ramiro vignolo" license="GPL">
+<language name="dragon" version="5" kateversion="3.14.2" section="Scientific" extensions="*.x2m;*.c2m" author="ramiro vignolo" license="GPL">
   <highlighting>
     <list name="dragon_inp_structure_and_modules">
 <!-- Begin the Dragon structure -->
