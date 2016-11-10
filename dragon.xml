@@ -1351,8 +1351,7 @@
   </general>
 </language>
 
-<!-- TODO: escribir los nombres de los modulos con los dos puntos al final.
-     TODO: corregir aquellas palabras claves con menos y mas en el medio de las mismas.
-     TODO: corregir aquellas palabras claves con signos de porcentaje o dividiendo en el medio de las mismas.
-     TODO: corregir comentarios delimitados por (* y *) porque al parecer el hecho de que existan comentarios que
+<!-- TODO: corregir comentarios delimitados por (* y *) porque al parecer el hecho de que existan comentarios que
            arrancan unicamente con * generan conflictos-->
+
+<!-- R. Vignolo -->
